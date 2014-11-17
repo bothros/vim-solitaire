@@ -8,10 +8,10 @@ Begin comments like this:
 
     # I'm going to play Mark Johnson's solitaire RPG!
 
-Put propositions each on their own line. End with T if the proposition is true, and F if the proposition is false. If you end with an x/6 chance, you can use Shift-R to have vim roll a die and mark it for you. Like this:
+Put propositions each on their own line. End with T if the proposition is true, and F if the proposition is false. If you end with an x/6 chance, you can use 'gr' to have vim roll a die and mark it for you. Like this:
 
     John is an orc. T
     John likes pie. 3/6 F
-    John hates pie, because he has to guard it. 4/6 #This is where I press Shift-R
+    John hates pie, because he has to guard it. 4/6 #This is where I press 'gr'
 
 Requires vim to be compiled with +python.

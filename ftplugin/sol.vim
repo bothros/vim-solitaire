@@ -23,7 +23,7 @@ def _decide():
 EOF
 
 command Roll :python _roll()
-
 command Decide :python _decide()
-nnoremap R :Decide<CR>
+
+nnoremap gr :Decide<CR>
 
