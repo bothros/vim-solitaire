@@ -2,6 +2,8 @@ This is a vim plugin for playing Mark Johnson's [solitaire RPG](http://indie-rpg
 
 It does statement highlighting and dice rolling.
 
+It recognizes files ending with the extension '.sol' .
+
 Begin comments like this:
 
     # I'm going to play Mark Johnson's solitaire RPG!
@@ -12,4 +14,4 @@ Put propositions each on their own line. End with T if the proposition is true, 
     John likes pie. 3/6 F
     John hates pie, because he has to guard it. 4/6 #This is where I press Shift-R
 
-Requires vim to be compiled with +Python.
+Requires vim to be compiled with +python.
