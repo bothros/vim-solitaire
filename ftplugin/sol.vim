@@ -19,7 +19,7 @@ def _insert_dice():
     rolls = [random.randint(1, s) for _ in xrange(n)]
     total = sum(rolls)
 
-    print "ROLLED: " + " + ".join(rolls) + " = " + str(total)
+    print "ROLLED: " + " + ".join([str(r) for r in rolls]) + " = " + str(total)
 
     vim.current.line[match.start():match.end()] = str(total)
 
