@@ -21,7 +21,7 @@ def _insert_dice():
 
     print "ROLLED: " + " + ".join([str(r) for r in rolls]) + " = " + str(total)
 
-    vim.current.line[match.start():match.end()] = str(total)
+    vim.current.line = vim.current.line[:match.start()] + str(total) + vim.current.line[match.end():]
 
 def _decide():
     import vim, random, re
