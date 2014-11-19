@@ -8,6 +8,21 @@ def _roll():
     import vim, random
     print "ROLLED: {}".format(random.randint(1, 6))
 
+def _insert_dice():
+    import vim, random, re
+    dice_pattern = re.compile('([0-9]+)d([0-9]+)')
+    match = dice_pattern.search(vim.current.line)
+
+    n = int(match.group(1))
+    s = int(match.group(2))
+
+    rolls = [random.randint(1, s) for _ in xrange(n)]
+    total = sum(rolls)
+
+    print "ROLLED: " + " + ".join(rolls) + " = " + str(total)
+
+    vim.current.line[match.start():match.end()] = str(total)
+
 def _decide():
     import vim, random, re
     chance_pattern = re.compile('([0-6])/6')
@@ -24,6 +39,8 @@ EOF
 
 command Roll :python _roll()
 command Decide :python _decide()
+command InsertDice :python _insert_dice()
 
 nnoremap gr :Decide<CR>
+nnoremap gi :InsertDice<CR>
 
