@@ -37,6 +37,7 @@ def _decide():
         vim.current.line += ' F'
 EOF
 
+
 command Roll :python _roll()
 command Decide :python _decide()
 command InsertDice :python _insert_dice()
